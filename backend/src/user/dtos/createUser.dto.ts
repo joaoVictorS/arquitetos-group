@@ -1,10 +1,24 @@
-export interface CreateUserDto {
+import { IsString, IsNumber } from 'class-validator';
+
+export class CreateUserDto {
+  @IsString()
   name: string;
+
+  @IsString()
   email: string;
-  password: string;
-  phone: number;
+
+  @IsString()
   gender: string;
+
+  @IsString()
+  password: string;
+
+  @IsNumber()
+  phone: number;
+
+  @IsNumber()
   age: number;
-  role: string;
-  type_user:number;
+
+  @IsNumber()
+  type_user: number;
 }
